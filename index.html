@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <link rel="stylesheet" href="/css/records.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
+    <script src="/script.js" defer></script>
+
+    <title>Crud</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-title">Cadastro</h1>
+    </header>
+
+    <main>
+      <button type="button" class="button blue mobile" id="register">
+        Cadastrar
+      </button>
+      <table id="tableClient" class="records">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Celular</th>
+            <th>Cidade</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Novo Cliente</h2>
+            <span class="modal-close" id="modalClose">&#10006;</span>
+          </header>
+          <form class="modal-form" id="form">
+            <input
+              id="name"
+              data-index="new"
+              type="text"
+              class="modal-field"
+              placeholder="Nome do Cliente"
+              required
+            />
+            <input
+              id="email"
+              type="email"
+              class="modal-field"
+              placeholder="E-mail do Cliente"
+              required
+            />
+            <input
+              id="cell"
+              type="tel"
+              class="modal-field"
+              placeholder="Celular do Cliente"
+              required
+            />
+            <input
+              id="city"
+              type="text"
+              class="modal-field"
+              placeholder="Cidade do Cliente"
+              required
+            />
+          </form>
+          <footer class="modal-footer">
+            <button id="save" class="button green">Salvar</button>
+            <button id="cancel" class="button blue">Cancelar</button>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
